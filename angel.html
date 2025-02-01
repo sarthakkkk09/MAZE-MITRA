@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: url('https://i.imgur.com/4M7IWwQ.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            background: rgba(255, 182, 193, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 2.5em;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+        .yes-btn {
+            background: #ff4d79;
+            color: white;
+        }
+        .no-btn {
+            background: #ffcccb;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">Yes</button>
+            <button class="no-btn" id="noButton" onmouseover="moveNoButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function sayYes() {
+            alert("Yay! I love you! ❤️");
+        }
+
+        function moveNoButton() {
+            let button = document.getElementById("noButton");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
